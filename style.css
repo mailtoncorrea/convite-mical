@@ -1,0 +1,395 @@
+:root {
+  --bg: #f7f6ff;
+  --card: #ffffff;
+  --accent: #7c5cff;
+  --muted: #666;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+footer {
+  text-align: center;
+  font-size: 14px;
+  color: #33caf8;
+  margin-top: 30px;
+  padding: 12px 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Fundo com imagem + overlay */
+body {
+  margin: 0;
+  color: #111;
+  background: url("/image/mikal2.jpeg") no-repeat center top fixed;
+  background-size: cover;
+  position: relative;
+}
+.decor-bottom-right {
+  position: absolute;
+  bottom: -20px; /* desce um pouco para sair para fora do card */
+  right: -20px;
+  width: 80px;
+  z-index: 1;
+}
+
+@media (max-width: 600px) {
+  .decor-bottom-right {
+    bottom: -10px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 60px;
+  }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* overlay escuro */
+  z-index: -1;
+}
+
+/* Container principal */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 24px;
+}
+
+/* Card do convite */
+.card {
+  background: rgba(230, 106, 158, 0.85); /* fundo vidro fosco */
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 6px 30px rgba(20, 18, 50, 0.2);
+  position: relative; /* 🔑 faz o sol se posicionar dentro do card */
+  overflow: hidden;
+}
+
+.decor-top-left {
+  position: absolute;
+  top: -20px; /* sobe um pouco para “abraçar” o card */
+  left: -20px; /* entra pela esquerda */
+  width: 80px;
+  z-index: 1;
+}
+
+/* No celular, centraliza em cima do convite */
+@media (max-width: 600px) {
+  .decor-top-left {
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+  }
+}
+
+/* Cabeçalho */
+header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-info {
+  flex: 1;
+}
+
+.header-img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  width: 96px;
+  height: 96px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent), #bbaaff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ece5ea;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+/* Títulos */
+h1 {
+  font-size: 28px;
+}
+
+p.lead {
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* Bloco do convite */
+.invitation {
+  margin-top: 20px;
+  border-radius: 12px;
+  padding: 20px;
+  background: linear-gradient(90deg, #fff, #fbfbff);
+}
+
+/* Imagens decorativas inline */
+.decor-inline {
+  display: block;
+  margin: 20px auto;
+  max-width: 200px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+.decor-inline:hover {
+  transform: scale(1.05);
+}
+
+/* Imagens decorativas flutuantes */
+.decor-float {
+  position: absolute;
+  opacity: 0.8;
+  animation: floaty 6s ease-in-out infinite;
+  z-index: 1;
+}
+
+/* Sol colado ao card */
+.decor-top-left {
+  top: -20px;
+  left: -20px;
+  width: 80px;
+}
+
+/* Óculos no canto inferior direito */
+.decor-bottom-right {
+  bottom: -20px;
+  right: -20px;
+  width: 90px;
+}
+
+/* Animação flutuar */
+@keyframes floaty {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Galeria */
+.gallery-title {
+  text-align: center;
+  font-size: 1.4rem;
+  margin: 20px 0 10px;
+  color: var(--accent);
+}
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin: 0 auto 30px;
+  max-width: 900px;
+}
+
+.photo-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.photo-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Texto e botões */
+.event-title {
+  font-size: 22px;
+}
+
+.event-info {
+  margin: 12px 0;
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn-ghost {
+  background: transparent;
+  border: 1px solid #ddd;
+}
+
+/* Tela de entrada */
+#entryOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 5, 10, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 999;
+}
+
+#entryCard {
+  width: 100%;
+  max-width: 520px;
+  background: var(--card);
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 10px 40px rgba(10, 8, 30, 0.4);
+  text-align: left;
+}
+#entryCard h2 {
+  margin-bottom: 6px;
+}
+#entryCard p {
+  margin-bottom: 14px;
+  color: var(--muted);
+}
+.input-row {
+  display: flex;
+  gap: 8px;
+}
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #e6e6f0;
+}
+.small {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+#guestSpan {
+  color: rgb(75, 12, 248);
+}
+#ger {
+  color: #3a0cf3;
+  font-size: 2vh;
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  background: #111;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-img {
+    margin-top: 10px;
+    width: 72px;
+    height: 72px;
+  }
+
+  .logo {
+    width: 82px;
+    height: 85px;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .container {
+    margin: 16px;
+  }
+
+  .decor-top-left {
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+  }
+
+  .decor-bottom-right {
+    bottom: -10px;
+    right: 10px;
+    width: 70px;
+  }
+
+  .photo-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+#afterReply p {
+  font-size: 16px;
+  margin-top: 12px;
+  opacity: 0;
+  transform: scale(1s);
+  animation: fadeIn 0.6s forwards;
+}
+
+#afterReply p.success {
+  color: #3a0cf3;
+}
+
+#afterReply p.error {
+  color: #d30d0dff;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+#entryOverlay {
+  animation: fadeSlideDown 1s ease;
+}
+
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

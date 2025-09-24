@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Convite - Aniversário</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Imagens decorativas flutuantes -->
+  
+
+
+  <header>
+    
+    <img
+      class="decor-float decor-bottom-right"
+      src="./image/imageoculos.jpeg"
+      alt="Com óculos"
+    />
+
+    <div id="entryOverlay">
+      <div id="entryCard" class="card">
+        <h2>Confirme seu nome para entrar</h2>
+        <p>
+          Digite seu nome completo (ou como prefere ser chamado) para acessar o
+          convite.
+        </p>
+        <div class="input-row">
+          <input
+            id="guestName"
+            type="text"
+            placeholder="Ex: Mical Sarmento"
+            autocomplete="name"
+          />
+          <button id="enterBtn" class="btn-primary">Entrar</button>
+        </div>
+        <div class="small">
+          Se preferir, você pode salvar como pdf.
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card">
+         <img class="decor-top-left" src="./image/imagesolcomoculos.jpeg" alt="Sol com óculos">
+        <header>
+          <div class="logo">Mical<br>Marielle</div>
+          
+          <div class="header-info">
+            <h1>Festa da Mical Marielle (7 anos)</h1>
+            <p class="lead">Você está convidado — confirme sua presença!</p>
+          </div>
+          <img
+            class="header-img"
+            src="./image/imagecriancanapiscina.jpeg"
+            alt="Sol com óculos"
+          />
+        </header>
+
+        <div class="invitation" id="invitation">
+          <p class="event-title">
+            Olá, <span id="guestSpan">convidado</span> 👋
+          </p>
+          <p class="event-info">
+            É com muita alegria que convidamos você para a comemoração de
+            aniversário da nossa filha.
+          </p>
+
+          <!-- Imagens de animação dentro do fluxo -->
+          <!-- <img
+            class="decor-inline"
+            src="/image/imagecriancanapiscina.jpeg"
+            alt="Criança na piscina"
+          /> -->
+
+          <ul>
+            <li><strong>Data:</strong> 26 de Outubro de 2025</li>
+            <li><strong>Hora:</strong> 13:00</li>
+            <li>
+              <strong>Local:</strong> Rua José Leal, 210 — Atlãntico 2 - casa do
+              vôvô <span id="ger"><strong>TONHÃO DO GERALDÃO</strong></span>
+            </li>
+          </ul>
+
+          <!-- <img
+            class="decor-inline"
+            src="/image/imageoculos.jpeg"
+            alt="Com óculos"
+          /> -->
+
+          <div class="actions">
+            <button id="confirmBtn" class="btn-primary">
+              Confirmar presença
+            </button>
+            <button id="declineBtn" class="btn-ghost">Não poderei ir</button>
+            <button id="printBtn" class="btn-ghost">
+              Imprimir / Salvar PDF
+            </button>
+          </div>
+
+          <!-- <img
+            class="decor-inline"
+            src="/image/imagesolcomoculos.jpeg"
+            alt="Sol com óculos"
+          /> -->
+
+          <div id="afterReply"></div>
+          <div id="toast" class="toast" style="display: none"></div>
+
+          <!-- Galeria da Aniversariante -->
+          <h2 class="gallery-title">Nossa Princesa 🎀</h2>
+          <div class="photo-gallery">
+            <img src="./image/mikal1.jpeg" alt="Foto da Mikal 1" />
+            <img src="./image/mikal2.jpeg" alt="Foto da Mikal 2" />
+            <img src="./image/mikal3.jpeg" alt="Foto da Mikal 3" />
+            <img src="./image/mikal4.jpeg" alt="Foto da Mikal 4" />
+          </div>
+          <footer>
+
+  <p>© 2025 Todos os direitos reservados -> Mailton Correa</p>
+</footer>
+
+
+          <!-- Galeria de Animação -->
+          <!-- <h2 class="gallery-title">Diversão da Festa 🎉</h2>
+          <div class="photo-gallery">
+            <! <img -->
+              <!-- src="/image/imagecriancanapiscina.jpeg"
+              alt="Criança na piscina"
+            /> --> --
+            <!-- <img src="/image/imageoculos.jpeg" alt="Com óculos" />
+            <img src="/image/imagesolcomoculos.jpeg" alt="Sol com óculos" /> -->
+            <!-- <img src="/image/animacaoextra.jpeg" alt="Decoração extra" /> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+
+    <script src="./index.js"></script>
+  </body>
+</html>
