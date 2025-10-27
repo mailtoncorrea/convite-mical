@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Convite - Aniversário</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/favicon" href="image/favicon.ico">
+
   </head>
   <body>
     <!-- Imagens decorativas flutuantes -->
@@ -88,7 +90,7 @@
             alt="Com óculos"
           /> -->
 
-          <div class="actions">
+          <!-- <div class="actions">
             <button id="confirmBtn" class="btn-primary">
               Confirmar presença
             </button>
@@ -96,7 +98,7 @@
             <button id="printBtn" class="btn-ghost">
               Imprimir / Salvar PDF
             </button>
-          </div>
+          </div> -->
 
           <!-- <img
             class="decor-inline"
@@ -108,32 +110,30 @@
           <div id="toast" class="toast" style="display: none"></div>
 
           <!-- Galeria da Aniversariante -->
-          <h2 class="gallery-title">Nossa Princesa 🎀</h2>
-          <div class="photo-gallery">
-            <img src="image/image01.jpeg" alt="Foto da Mikal 1" />
-            <img src="image/image02.jpg" alt="Foto da Mikal 2" />
-            <img src="image/image03.jpg" alt="Foto da Mikal 3" />
-            <img src="image/image04.jpg" alt="Foto da Mikal 4" />
-            <img src="image/image05.jpg" alt="Foto da Mikal 5" />
-            <img src="image/image06.jpg" alt="Foto da Mikal 6" />
-            <img src="image/image07.jpg" alt="Foto da Mikal 7" />
-          </div>
+         <div class="photo-gallery">
+  <img src="image/image01.jpeg" alt="Foto da Mikal 1" onclick="openImage(this.src)" />
+  <img src="image/image02.jpg" alt="Foto da Mikal 2" onclick="openImage(this.src)" />
+  <img src="image/image03.jpg" alt="Foto da Mikal 3" onclick="openImage(this.src)" />
+  <img src="image/image04.jpg" alt="Foto da Mikal 4" onclick="openImage(this.src)"/>
+  <img src="image/image05.jpg" alt="Foto da Mikal 5" onclick="openImage(this.src)"/>
+  <img src="image/image06.jpg" alt="Foto da Mikal 6" onclick="openImage(this.src)"/>
+  <img src="image/image07.jpg" alt="Foto da Mikal 7" onclick="openImage(this.src)"/>
+</div>
+
+<!-- Modal para visualizar imagem -->
+<div id="imgModal" class="modal" onclick="closeImage()">
+  <img id="modalImg" />
+  <a id="downloadBtn" download>📥 Baixar</a>
+</div>
+   
+            
+          
           <footer>
 
   <p>© 2025 Todos os direitos reservados -> Mailton Correa</p>
 </footer>
 
 
-          <!-- Galeria de Animação -->
-          <!-- <h2 class="gallery-title">Diversão da Festa 🎉</h2>
-          <div class="photo-gallery">
-            <! <img -->
-              <!-- src="/image/imagecriancanapiscina.jpeg"
-              alt="Criança na piscina"
-            /> --> --
-            <!-- <img src="/image/imageoculos.jpeg" alt="Com óculos" />
-            <img src="/image/imagesolcomoculos.jpeg" alt="Sol com óculos" /> -->
-            <!-- <img src="/image/animacaoextra.jpeg" alt="Decoração extra" /> -->
           </div>
         </div>
       </div>
